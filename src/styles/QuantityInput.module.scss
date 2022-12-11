@@ -1,0 +1,32 @@
+.input_box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 35px 50px 35px;
+
+  input {
+    background-color: transparent;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
+}
+
+.change_btn {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  border: 2px solid var(--theme-base-dark);
+  color: var(--theme-base-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

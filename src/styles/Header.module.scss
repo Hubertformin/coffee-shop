@@ -1,0 +1,13 @@
+@import "responsive";
+
+.header {
+  border-top: 2px solid var(--theme-base-dark);
+  border-bottom: 2px solid var(--theme-base-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  @include media-gt-phone {
+    height: 100px;
+  }
+}
