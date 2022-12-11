@@ -1,0 +1,7 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 400px;
+  grid-template-rows: 100%;
+  padding: 0 1rem 2.6rem;
+}
