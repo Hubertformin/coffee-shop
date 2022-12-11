@@ -1,0 +1,20 @@
+:root {
+  --theme-base: #3cc254;
+  --theme-base-dark: #11571c;
+  --red-80: #ef4444;
+  --green-80: #3caf50;
+  --blue-80: #1485e3;
+  --teal-80: #1da2b0;
+}
+
+// SASS variables to be used in-css
+$theme-base: #3cc254;
+$theme-base-dark: #11571c;
+$red-80: #ef4444;
+$green-80: #3caf50;
+$blue-80: #1485e3;
+$teal-80: #1da2b0;
+
+.text-theme-dark {
+  color: var(--theme-base-dark);
+}
