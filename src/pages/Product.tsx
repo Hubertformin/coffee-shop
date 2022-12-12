@@ -98,7 +98,7 @@ export default function Product() {
                         {
                             isItemInCart ?
                                 (<div className="pt-8">
-                                    <Button bg={'#000'} className={'sm:w-full'} onClick={removeFromCart}>Remove from Cart</Button>
+                                    <Button bg={'#000'} className={'w-full md:w-auto'} onClick={removeFromCart}>Remove from Cart</Button>
                                 </div>) :
                                 (<div className="pt-8">
                                     <Button className={'w-full md:w-auto'} onClick={addToCart}>Add to Cart</Button>&nbsp;

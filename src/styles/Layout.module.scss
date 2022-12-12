@@ -14,8 +14,17 @@
 
 .body {
   height: 100%;
+  width: 100%;
   // Responsive: For Devices bigger that phones (width > 768px)
   @include media-gt-phone {
+    width: 90%;
+    height: 96%;
+  }
+  @include media-gt-tablet {
+    width: 95%;
+    height: 96%;
+  }
+  @include media-desktop {
     width: 72%;
     height: 96%;
   }

@@ -58,6 +58,8 @@ $badge-size: 25px;
   @include media-gt-phone {
     border-radius: 12px;
     bottom: 14%;
+    left: unset;
+    top: unset;
     right: 14.4%;
     height: 77vh;
     width: 550px;
