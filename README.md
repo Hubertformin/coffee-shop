@@ -21,11 +21,11 @@ This webapp is hosted on aws amplify. [See the demo](https://stagging.d263mi7ea5
 - WebStorm Code Editor
 
 ## Screenshots
-<img style="width: 450px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642075-58dd6cbc-b133-41f4-acc7-27ec62985cf4.png">
-<img style="width: 50px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642110-62487cc4-de37-4a68-88cb-7db5391c084b.png">
-<img style="width: 50px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642145-08352c4a-59dc-492e-beae-c616d8fac833.png">
-<img style="width: 50px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642217-40d6209a-6391-4038-a773-5fd7c76a09fb.png">
-<img style="width: 50px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642289-84d9cb13-9468-4079-8b80-43ea42222526.png">
+<img style="width: 550px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642075-58dd6cbc-b133-41f4-acc7-27ec62985cf4.png">
+<img style="width: 550px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642110-62487cc4-de37-4a68-88cb-7db5391c084b.png">
+<img style="width: 550px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642145-08352c4a-59dc-492e-beae-c616d8fac833.png">
+<img style="width: 550px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642217-40d6209a-6391-4038-a773-5fd7c76a09fb.png">
+<img style="width: 550px;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642289-84d9cb13-9468-4079-8b80-43ea42222526.png">
 
 
 ## Project structure
