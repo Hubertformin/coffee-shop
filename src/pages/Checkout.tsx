@@ -10,6 +10,8 @@ import {Formik} from "formik";
 import {useState} from "react";
 import {BsFillCheckCircleFill} from "react-icons/bs";
 import {useNavigate} from "react-router-dom";
+import {addOrder} from "../data";
+import {toast} from "react-toastify";
 
 
 export default function Checkout() {
@@ -29,9 +31,16 @@ export default function Checkout() {
     // Handle saving order
     const saveOrder = (values, {setSubmitting}) => {
         setTimeout(() => {
-            console.log(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-            setIsOrderComplete(true);
+            addOrder({...values, products: cartState})
+                .then(()=> {
+                    setIsOrderComplete(true);
+                })
+                .catch((err) => {
+                    toast.error('There was an error saving your order, Please try again later')
+                })
+                .finally(() => {
+                    setSubmitting(false);
+                })
         }, 3200);
     }
 

@@ -11,5 +11,21 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "api": {
+    "coffeeShopApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "coffeShopLambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
   }
 }

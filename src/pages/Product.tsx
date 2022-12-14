@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import {useEffect, useState} from "react";
 import {ProductModel} from "../models/product.model";
 import {useParams} from "react-router-dom";
-import {DATA} from "../data";
 import styles from '../styles/Product.module.scss';
 import {formatCurrency} from "../utils/number";
 import QuantityInput from "../components/QuantityInput";
@@ -13,6 +12,7 @@ import {addToCartAction, removeFromCartAction} from "../store/cart.slice";
 import {toast} from "react-toastify";
 import {CartModel} from "../models/cart.model";
 import SkeletonLoader from "../components/SkeletonLoader";
+import {getProductById} from "../data";
 
 export default function Product() {
     const cartState: CartModel[] = useSelector(state => (state as any).cart.products) as CartModel[];
@@ -30,13 +30,15 @@ export default function Product() {
 
     useEffect(() => {
         // Get product by id
-        const item = DATA.products.find(p => p.id.toString() === params?.productId)
-        setProduct(item);
-        // Check's if the current item is already in the cart
-        // We save this state so we can either show a 'add to cart' or 'remove from cart' button
-        setIsItemInCart(cartState.some(p => p.id === item?.id));
-
-        setTimeout(() => setIsPageDataLoading(false), 2500);
+        getProductById(params?.productId || '')
+            .then(({data}) => {
+                setProduct(data);
+                // Check's if the current item is already in the cart
+                // We save this state so we can either show a 'add to cart' or 'remove from cart' button
+                setIsItemInCart(cartState.some(p => p.id === data?.id));
+                // remove page loader
+                setIsPageDataLoading(false);
+            })
     }, [params?.productId, cartState]);
 
 

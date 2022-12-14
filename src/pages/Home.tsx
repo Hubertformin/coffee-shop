@@ -4,7 +4,7 @@
  */
 import {ChangeEvent, useEffect, useState} from "react";
 import styles from '../styles/Home.module.scss';
-import {DATA} from "../data";
+import {getCategories, getProducts} from "../data";
 import {formatCurrency} from "../utils/number";
 import {ProductModel} from "../models/product.model";
 import {FiSearch} from "react-icons/fi";
@@ -27,9 +27,14 @@ const Home = () => {
     }, []);
 
     const initProducts = () => {
-        setCategories(['All', ...DATA.categories]);
-        setProducts(DATA.products.slice(0,12));
-        setTimeout(() => setIsPageDataLoading(false), 2500);
+        setIsPageDataLoading(true);
+        Promise.all([getProducts(), getCategories()])
+            .then(([products, categories]) => {
+                setProducts(products.data);
+                setCategories(['All', ...categories.data]);
+                // Hide page loading schema
+                setIsPageDataLoading(false)
+            });
     }
 
     const onSearch = (e:  ChangeEvent<HTMLInputElement>) => {
@@ -39,19 +44,15 @@ const Home = () => {
             initProducts();
             return;
         }
-        /**
-         * Searching is done by displaying the items that match the search query by name
-         * Then we display the items that match the search query in description
-         *
-         */
-        const search$ = new RegExp(value, 'ig');
 
-        const items = [
-            ...DATA.products.filter(product => product.name.search(search$) > -1),
-            ...DATA.products.filter(product => product.description.search(search$) > -1)
-        ];
-
-        setProducts([...items]);
+        // show loader
+        setIsPageDataLoading(true);
+        // Fetch products by search query from api
+        getProducts({search: value})
+            .then(({data}) => {
+                setProducts(data);
+                setIsPageDataLoading(false);
+            });;
     };
 
     /**
@@ -61,7 +62,7 @@ const Home = () => {
     const changeViewCategory = (category: string) => {
         setCategoryFilter(category);
         if (category === 'All') initProducts();
-        else setProducts(DATA.products.filter(p => p.category === category));
+        else setProducts(products.filter(p => p.category === category));
     }
 
     return(

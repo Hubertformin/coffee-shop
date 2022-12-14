@@ -33,7 +33,24 @@ app.get('/categories', function(req, res) {
 
 app.get('/products', function(req, res) {
   // Fetch products
-  res.status(200).json({message: 'Products fetched', data: PRODUCTS.slice(0,12)});
+  // If search is specified, upload it
+  let data = [];
+  if (req.params.search) {
+    /**
+     * Searching is done by displaying the items that match the search query by name
+     * Then we display the items that match the search query in description
+     *
+     */
+    const search$ = new RegExp(value, 'ig');
+
+    data = [
+      ...PRODUCTS.filter(product => product.name.search(search$) > -1),
+      ...PRODUCTS.filter(product => product.description.search(search$) > -1)
+    ];
+  } else {
+    data = PRODUCTS.slice(12);
+  }
+  res.status(200).json({message: 'Products fetched', data});
 });
 
 app.get('/products/:id', function(req, res) {
@@ -45,6 +62,19 @@ app.get('/products/:id', function(req, res) {
     return;
   }
   res.status(200).json({message: 'Product fetched', data: product});
+});
+
+app.post('/orders', (req, res) => {
+  // Add orders,
+  const data = req.body;
+  // validation
+  if (!data) return res.status(400).json({message: 'The order data is required'})
+  /**
+   * Ideally, we will save this data to a database
+   * */
+  const order = JSON.stringify(data);
+
+  res.status(201).json({message: 'Order created'});
 });
 
 app.listen(3000, function() {
