@@ -17,11 +17,12 @@ aws amplify. Click [View the application](https://stagging...amplifyapp.com).
 - Webstorm Code Editor
 
 ## Screenshots
-<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 39 37 AM-min" src="https://user-images.githubusercontent.com/25336761/207588203-7a288d6c-de99-431f-935f-a7e772d588c2.png">
-<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 39 51 AM" src="https://user-images.githubusercontent.com/25336761/207582404-a84a7494-0a69-499a-a921-0e2f09c8a468.png">
-<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 40 46 AM" src="https://user-images.githubusercontent.com/25336761/207582528-a0657b4f-02a2-4ed2-8fbf-cc43d5c061a1.png">
-<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 41 41 AM" src="https://user-images.githubusercontent.com/25336761/207582568-02bd5fd6-1973-4a93-b8a2-cdfae024039f.png">
-<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 40 12 AM" src="https://user-images.githubusercontent.com/25336761/207582931-8576da30-0ef1-4c02-b28d-c5b18a1cec67.png">
+<img width="1792" alt="Screen Shot 2022-12-14 at 9 39 37 AM-min" src="https://user-images.githubusercontent.com/25336761/207642075-58dd6cbc-b133-41f4-acc7-27ec62985cf4.png">
+<img width="1792" alt="Screen Shot 2022-12-14 at 9 39 45 AM-min" src="https://user-images.githubusercontent.com/25336761/207642110-62487cc4-de37-4a68-88cb-7db5391c084b.png">
+<img width="1792" alt="Screen Shot 2022-12-14 at 9 40 12 AM-min" src="https://user-images.githubusercontent.com/25336761/207642145-08352c4a-59dc-492e-beae-c616d8fac833.png">
+<img width="1792" alt="Screen Shot 2022-12-14 at 9 40 46 AM-min" src="https://user-images.githubusercontent.com/25336761/207642217-40d6209a-6391-4038-a773-5fd7c76a09fb.png">
+<img width="1792" alt="Screen Shot 2022-12-14 at 9 41 41 AM-min" src="https://user-images.githubusercontent.com/25336761/207642289-84d9cb13-9468-4079-8b80-43ea42222526.png">
+
 
 ## Project structure
 ```
