@@ -9,6 +9,11 @@ import {Provider} from "react-redux";
 import {store} from "./store";
 import {ToastContainer} from "react-toastify";
 
+import { Amplify } from "aws-amplify";
+import config from './aws-exports';
+
+Amplify.configure(config);
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );

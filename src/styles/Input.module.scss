@@ -1,0 +1,23 @@
+.input_control {
+  margin-bottom: 1rem;
+}
+.input_group {
+  background-color: #ffffff;
+  height: 50px;
+  min-width: 180px;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding: 0 1rem;
+  }
+}
+ .label {
+   font-weight: 600;
+   padding: 0 0.35rem;
+   margin-bottom: 0.4rem;
+ }

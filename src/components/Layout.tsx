@@ -5,10 +5,11 @@ import Cart from "./Cart";
 
 interface Props {
     title: string;
-    children: ReactNode
+    children: ReactNode,
+    hideCart?: boolean;
 }
 
-export default function Layout({title = '', children}: Props) {
+export default function Layout({title = '', hideCart=false, children}: Props) {
     return(
         <main className={styles.page}>
             <div className={`${styles.body} rounded`}>
@@ -18,7 +19,7 @@ export default function Layout({title = '', children}: Props) {
                     {children}
                 </div>
             </div>
-            <Cart />
+            {!hideCart && <Cart />}
             <footer>
                 <ul>
                     <li>Terms of Service</li>

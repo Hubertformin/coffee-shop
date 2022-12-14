@@ -1,0 +1,10 @@
+{
+  "function": {
+    "coffeShopLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": []
+    }
+  }
+}
