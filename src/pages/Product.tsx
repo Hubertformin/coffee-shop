@@ -12,11 +12,14 @@ import {useDispatch, useSelector} from "react-redux";
 import {addToCartAction, removeFromCartAction} from "../store/cart.slice";
 import {toast} from "react-toastify";
 import {CartModel} from "../models/cart.model";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 export default function Product() {
     const cartState: CartModel[] = useSelector(state => (state as any).cart.products) as CartModel[];
     const [product, setProduct] = useState<ProductModel>();
     const [isItemInCart, setIsItemInCart] = useState(false);
+    // This saves the state of the page data, so we can show a loading schema
+    const [isPageDataLoading, setIsPageDataLoading] = useState<boolean>(true);
     const params = useParams();
     const dispatch = useDispatch();
     
@@ -31,7 +34,9 @@ export default function Product() {
         setProduct(item);
         // Check's if the current item is already in the cart
         // We save this state so we can either show a 'add to cart' or 'remove from cart' button
-        setIsItemInCart(cartState.some(p => p.id === item?.id))
+        setIsItemInCart(cartState.some(p => p.id === item?.id));
+
+        setTimeout(() => setIsPageDataLoading(false), 2500);
     }, [params?.productId, cartState]);
 
 
@@ -63,7 +68,7 @@ export default function Product() {
 
     return (
         <Layout title={product?.name || ''}>
-            {product &&
+            {(product && !isPageDataLoading) ?
                 <div className={`${styles.product_view} md:mt-6`}>
                     <div className={styles.image_box}>
                         <img src={product.image} alt={product.name}/>
@@ -107,8 +112,27 @@ export default function Product() {
                         }
 
                     </div>
-                </div>
-            }
+                </div> : <LoadingSchema />}
         </Layout>
+    )
+}
+
+
+function LoadingSchema() {
+    return (
+        <div className={`${styles.product_view} md:mt-6`}>
+            <div className={styles.image_box}>
+                <SkeletonLoader className="h-96 w-full rounded-lg mb-4" />
+            </div>
+            <div className={`px-6 md:px-8 pt-10 md:pt-16 pb-40 md:pb-0 ${styles.details_box}`}>
+                <div className="flex justify-between">
+                    <SkeletonLoader className="h-10 w-full rounded-lg mb-4" />
+                </div>
+                <SkeletonLoader className="h-20 w-full rounded-lg mb-4" />
+                <SkeletonLoader className="h-20 w-full rounded-lg mb-4" />
+                <SkeletonLoader className="h-20 w-full rounded-lg mb-4" />
+
+            </div>
+        </div>
     )
 }

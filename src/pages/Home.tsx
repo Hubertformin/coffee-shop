@@ -10,11 +10,14 @@ import {ProductModel} from "../models/product.model";
 import {FiSearch} from "react-icons/fi";
 import Layout from "../components/Layout";
 import { useNavigate } from "react-router-dom";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 const Home = () => {
     const [products, setProducts] = useState<ProductModel[]>([]);
     const [categories, setCategories] = useState<string[]>([]);
     const [searchText, setSearchText] = useState<string>('');
+    // This saves the state of the page data, so we can show a loading schema
+    const [isPageDataLoading, setIsPageDataLoading] = useState<boolean>(true);
     // This save the state of the active category showing on the view
     const [categoryFilter, setCategoryFilter] = useState('All');
     const navigate = useNavigate();
@@ -26,6 +29,7 @@ const Home = () => {
     const initProducts = () => {
         setCategories(['All', ...DATA.categories]);
         setProducts(DATA.products.slice(0,12));
+        setTimeout(() => setIsPageDataLoading(false), 2500);
     }
 
     const onSearch = (e:  ChangeEvent<HTMLInputElement>) => {
@@ -62,7 +66,9 @@ const Home = () => {
 
     return(
         <Layout title={'Welcome to Coffee Shop, Shop different flavors of coffee'}>
-            <div className={styles.items_view}>
+            {
+                isPageDataLoading ? (<LoadingSchema />) :
+                (<div className={styles.items_view}>
                 <div className={`${styles.categories_col} pt-8 overflow-y-auto`}>
                     <h2 className="font-black text-sm text-gray-800 capitalize mb-4 text-theme-dark pl-4">CATEGORIES</h2>
                     <ul>
@@ -105,9 +111,33 @@ const Home = () => {
                         }
                     </div>
                 </div>
-            </div>
+            </div>)
+            }
         </Layout>
     )
 };
+
+function LoadingSchema() {
+    return (
+        <div className={styles.items_view}>
+            <div className={`${styles.categories_col} pt-8 overflow-y-auto`}>
+                {
+                    Array(8).fill(1).map((p, index) => {
+                        return <SkeletonLoader key={'loader_'+index} className="h-10 w-full rounded-lg mb-4" />
+                    })
+                }
+            </div>
+            <div className={`${styles.items_col} px-6 overflow-y-auto pt-16`}>
+                <div className={styles.items_grid}>
+                    {
+                        Array(12).fill(1).map((p, index) => {
+                            return <SkeletonLoader key={'items_'+index} className="h-48 w-full rounded-lg mb-4" />
+                        })
+                    }
+                </div>
+            </div>
+        </div>
+    )
+}
 
 export default Home;

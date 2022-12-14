@@ -11,6 +11,7 @@ import {useState} from "react";
 import {BsFillCheckCircleFill} from "react-icons/bs";
 import {useNavigate} from "react-router-dom";
 
+
 export default function Checkout() {
     const cartState: CartModel[] = useSelector(state => (state as any).cart.products) as CartModel[];
 

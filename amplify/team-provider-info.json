@@ -16,7 +16,8 @@
         "coffeShopLambda": {
           "deploymentBucketName": "amplify-coffeeshop-staging-205218-deployment",
           "s3Key": "amplify-builds/coffeShopLambda-667445634c6b7274374e-build.zip"
-        }
+        },
+        "coffeeShopOrdersLambda": {}
       }
     }
   }
