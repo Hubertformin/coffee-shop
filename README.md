@@ -17,11 +17,11 @@ aws amplify. Click [View the application](https://stagging...amplifyapp.com).
 - Webstorm Code Editor
 
 ## Screenshots
-<img width="600" style="display: inline-block" alt="Screen Shot 2022-12-14 at 9 39 37 AM-min" src="https://user-images.githubusercontent.com/25336761/207588203-7a288d6c-de99-431f-935f-a7e772d588c2.png">
-<img width="600" style="display: inline-block" alt="Screen Shot 2022-12-14 at 9 39 51 AM" src="https://user-images.githubusercontent.com/25336761/207582404-a84a7494-0a69-499a-a921-0e2f09c8a468.png">
-<img width="600" style="display: inline-block" alt="Screen Shot 2022-12-14 at 9 40 46 AM" src="https://user-images.githubusercontent.com/25336761/207582528-a0657b4f-02a2-4ed2-8fbf-cc43d5c061a1.png">
-<img width="600" style="display: inline-block" alt="Screen Shot 2022-12-14 at 9 41 41 AM" src="https://user-images.githubusercontent.com/25336761/207582568-02bd5fd6-1973-4a93-b8a2-cdfae024039f.png">
-<img width="600" style="display: inline-block" alt="Screen Shot 2022-12-14 at 9 40 12 AM" src="https://user-images.githubusercontent.com/25336761/207582931-8576da30-0ef1-4c02-b28d-c5b18a1cec67.png">
+<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 39 37 AM-min" src="https://user-images.githubusercontent.com/25336761/207588203-7a288d6c-de99-431f-935f-a7e772d588c2.png">
+<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 39 51 AM" src="https://user-images.githubusercontent.com/25336761/207582404-a84a7494-0a69-499a-a921-0e2f09c8a468.png">
+<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 40 46 AM" src="https://user-images.githubusercontent.com/25336761/207582528-a0657b4f-02a2-4ed2-8fbf-cc43d5c061a1.png">
+<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 41 41 AM" src="https://user-images.githubusercontent.com/25336761/207582568-02bd5fd6-1973-4a93-b8a2-cdfae024039f.png">
+<img style="display: inline-block;width: 50%" alt="Screen Shot 2022-12-14 at 9 40 12 AM" src="https://user-images.githubusercontent.com/25336761/207582931-8576da30-0ef1-4c02-b28d-c5b18a1cec67.png">
 
 ## Project structure
 ```
