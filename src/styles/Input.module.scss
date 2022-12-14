@@ -18,6 +18,21 @@
 }
  .label {
    font-weight: 600;
+   font-size: 15px;
    padding: 0 0.35rem;
    margin-bottom: 0.4rem;
+ }
+ .errorLabel {
+   color: var(--red-80);
+ }
+
+ .errorText {
+   margin-top: 0.4rem;
+   font-size: 14px;
+   font-weight: 600;
+   color: var(--red-80);
+ }
+
+ .errorInput {
+   border-color: var(--red-80);
  }

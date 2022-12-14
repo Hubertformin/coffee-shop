@@ -8,6 +8,9 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  &:disabled {
+    opacity: 0.8;
+  }
 }
 
 .default {
@@ -23,5 +26,18 @@
   color: darken($theme-base, 7%);
   &:hover {
     background-color: transparentize($theme-base, 0.6);
+  }
+}
+
+.spinner {
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
   }
 }
