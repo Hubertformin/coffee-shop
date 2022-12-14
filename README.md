@@ -1,27 +1,31 @@
 # Coffee Shop Web Application
-This is a coffee shop web application build with React and Aws amplify as backend. This webapp is hosted on 
-aws amplify. Click [View the application](https://stagging...amplifyapp.com).
-> ⚠️ Images on the webpage might take while to load because they have not been compressed and 
-> optimized by a CDN. Ideally in production we will use a CDN
+This is a coffee shop web application build with React and Aws amplify as backend. It consists of a 
+home page, product detail page and a checkout screen.
+<br />
+This webapp is hosted on aws amplify. [See the demo](https://stagging.d263mi7ea5qb6k.amplifyapp.com/).
+> ⚠️ The images on the webpage might take while to load because they have not been compressed and 
+> optimized by a CDN. Ideally in production a CDN will be used to serve image assets
 > 
-## Languages and Technologies
+## Technologies & Languages
 - [x] React v18.2.0
 - [x] Amplify v5.0.5
 - [x] Typescript v4.9.4
 - [x] Sass v1.56.2
 
 ## Plugins & Tools
-- Formik 
-- Toastify
-- Tailwind CSS
-- Webstorm Code Editor
+- [Formik](https://formik.org/)
+- [React redux](https://react-redux.js.org/)
+- [react-icons](https://react-icons.github.io/react-icons)
+- [react-toastify](https://fkhadra.github.io/react-toastify/introduction)
+- [Tailwind CSS](https://tailwindcss.com/)
+- WebStorm Code Editor
 
 ## Screenshots
-<img width="1792" alt="Screen Shot 2022-12-14 at 9 39 37 AM-min" src="https://user-images.githubusercontent.com/25336761/207642075-58dd6cbc-b133-41f4-acc7-27ec62985cf4.png">
-<img width="1792" alt="Screen Shot 2022-12-14 at 9 39 45 AM-min" src="https://user-images.githubusercontent.com/25336761/207642110-62487cc4-de37-4a68-88cb-7db5391c084b.png">
-<img width="1792" alt="Screen Shot 2022-12-14 at 9 40 12 AM-min" src="https://user-images.githubusercontent.com/25336761/207642145-08352c4a-59dc-492e-beae-c616d8fac833.png">
-<img width="1792" alt="Screen Shot 2022-12-14 at 9 40 46 AM-min" src="https://user-images.githubusercontent.com/25336761/207642217-40d6209a-6391-4038-a773-5fd7c76a09fb.png">
-<img width="1792" alt="Screen Shot 2022-12-14 at 9 41 41 AM-min" src="https://user-images.githubusercontent.com/25336761/207642289-84d9cb13-9468-4079-8b80-43ea42222526.png">
+<img style="width: 49.5%;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642075-58dd6cbc-b133-41f4-acc7-27ec62985cf4.png">
+<img style="width: 49.5%;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642110-62487cc4-de37-4a68-88cb-7db5391c084b.png">
+<img style="width: 49.5%;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642145-08352c4a-59dc-492e-beae-c616d8fac833.png">
+<img style="width: 49.5%;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642217-40d6209a-6391-4038-a773-5fd7c76a09fb.png">
+<img style="width: 49.5%;display: inline-block;"  alt="Screen Shot 1" src="https://user-images.githubusercontent.com/25336761/207642289-84d9cb13-9468-4079-8b80-43ea42222526.png">
 
 
 ## Project structure
@@ -51,3 +55,16 @@ aws amplify. Click [View the application](https://stagging...amplifyapp.com).
 │   index.scss
 │   package.json
 ```
+### src/components
+Reusable independent bits of code which are used in all the pages.
+- `Button.tsx`:  A custom HTML button with loading function
+- `Cart.tsx`: Cart modal with floating action button toggle
+- `Header.tsx`: Toolbar component
+- `Input.tsx`: A custom input element with validation states
+- `QuantityInput.tsx`: An input field used to set the quantity of the product
+- `SkeletonLoader.tsx`: This loader is displayed on a page while data is being fetched from the backend
+
+### src/pages
+- `Home.tsx` Home screen
+- `Product.tsx` Product detail screen
+- `Checkout.tsx` Checkout screen
